@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    
+
     //  hide start stuff //
     
     $(".townMusic").trigger('load');

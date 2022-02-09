@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/jquery.backgroundpos.min.js"></script>
+    <script src="./js/screenSizes.js"></script>
     <script defer src="./js/app.js"></script>
 
     <title>Weerwolven van Wakkerdam</title>
@@ -48,7 +49,7 @@
 
 
 
-    <div class="background day">
+    <div class="background day large">
         <img class="ground" src="./assets/Village2.svg" alt="">
         <div class="sun">
             <div class="first"></div>
@@ -67,14 +68,14 @@
         </div>
     </div>
 
-    <div class="arrow"></div>
-    <div class="arrowNight"></div>
+    <div class="arrow large"></div>
+    <div class="arrowNight large"></div>
 
-    <section class="title">
+    <section class="title large">
         <h1 id="title">Weerwolven van Wakkerdam</h1>
     </section>
 
-    <section class="start">
+    <section class="start large">
         <h1>De Dag</h1>
         <h1 class="timer">0:0</h1>
         <div class="controls">
@@ -86,7 +87,7 @@
         </div>
     </section>
 
-    <section class="night">
+    <section class="night large">
         <h1>De Nacht</h1>
         <div class="cards">
             <img id="zienerInactive" src="./assets/cards/zienerInactive.png" alt="">
@@ -102,7 +103,11 @@
         </div>
     </section>
     
-
+    <div class="small">
+        <h1>Je scherm is te klein!</h1>
+        <h3>Probeer een groter scherm en refresh de pagina</h3>
+        <h3>(min 900 x 750 px)</h3>
+    </div>
     
 </body>
 </html>
