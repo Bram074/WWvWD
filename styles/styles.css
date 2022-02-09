@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+/* Title box */
+.title {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.title > h1 {
+    font-size: 50px;
+    color: darkred;
+}
+
+body {
+   /*background: url(../assets/moon.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;*/
+   overflow: hidden;
+}
+
+/* background */
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #2b96d0, #004971,#002042, #000a14);
+    background-size: 800% 800%;
+}
+
+
+
+.ground {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+.arrow {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-top: 5px solid  rgba(250, 250, 161, 1);
+    border-right: 5px solid rgba(250, 250, 161, 1);
+    transform: translate(92vw, 50vh) rotate(45deg);
+    cursor: pointer;
+}
+
+.arrow:hover{
+    transform: translate(93vw, 50vh) rotate(45deg);
+    border-top: 5px solid rgba(250, 250, 161, 1);
+    border-right: 5px solid rgba(250, 250, 161, 1);
+}
+
+.arrowNight {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-top: 5px solid  white;
+    border-right: 5px solid white;
+    transform: translate(5vw, 50vh) rotate(225deg);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrowNight:hover{
+    transform: translate(4vw, 50vh) rotate(225deg);
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+}
+
+    /* Sun */
+.sun {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 450px;
+}
+
+.sun > .first {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    background-color: rgba(250, 250, 161, 0.1);
+    border-radius: 50%;
+    animation-name: sunFirst;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+
+@keyframes sunFirst {
+    100% {width: 650px; height: 650px; background-color: rgba(250, 250, 161, 0.05);}
+}
+
+.sun > .second {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    background-color: rgba(250, 250, 161, 0.1);
+    border-radius: 50%;
+    animation-name: sunSecond;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+@keyframes sunSecond {
+    100% {width: 500px; height: 500px;background-color: rgba(250, 250, 161, 0.05)}
+}
+
+.sun > .third {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    background-color: rgba(161, 247, 250, 0.1);
+    border-radius: 50%;
+    animation-name: sunThird;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+
+@keyframes sunThird {
+    100% {width: 400px; height: 400px;background-color: rgba(250, 250, 161, 0.05)}
+}
+
+.sun > .fourth {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-color: rgba(250, 250, 161, 1);
+    border-radius: 50%;
+}
+
+/* moon */
+
+.moon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 155vh;
+}
+
+.moon > .fourth {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-color: rgb(255, 255, 239);
+    border-radius: 50%;
+}
+
+.moon > .oval1 {
+    width: 25px;
+    height: 35px;
+    position: absolute;
+    transform: translate(-60px, 60px) rotate(-30deg);
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.moon > .oval2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translate(-75px, 20px) rotate(-30deg);
+    background-color: rgb(228, 228, 228);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.moon > .zero {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    background-color: rgba(255, 255, 236, 0.1);
+    border-radius: 50%;
+    animation-name: moonZero;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+
+@keyframes moonZero {
+    100% {width: 1000px; height: 1000px; background-color: rgba(255, 255, 236, 0.05);}
+}
+
+.moon > .first {
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    background-color: rgba(255, 255, 236, 0.1);
+    border-radius: 50%;
+    animation-name: moonFirst;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+
+@keyframes moonFirst {
+    100% {width: 800px; height: 800px; background-color: rgba(255, 255, 236, 0.05);}
+}
+
+.moon > .second {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    background-color: rgba(255, 255, 236, 0.1);
+    border-radius: 50%;
+    animation-name: moonSecond;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+@keyframes moonSecond {
+    100% {width: 650px; height: 650px;background-color: rgba(255, 255, 236, 0.05)}
+}
+
+.moon > .third {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    background-color: rgba(255, 255, 236, 0.1);
+    border-radius: 50%;
+    animation-name: moonThird;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+
+@keyframes moonThird {
+    100% {width: 450px; height: 450px;background-color: rgba(255, 255, 236, 0.05)}
+}
+
+
+
+/* De Dag */
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.start, .nacht > h1{
+    font-size: 60px;
+    color: rgba(250, 250, 161, 1);
+}
+
+.start > .timer {
+    color: black;
+    font-size: 80px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.controls > div {
+    font-size: 28px;
+    width: 150px;
+    border: 2px solid rgba(250, 250, 161, 1);
+    background-color: rgba(250, 250, 161, 1);
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.controls > div:hover {
+    background: none;
+    color:rgba(250, 250, 161, 1);
+}
+
+/* De Nacht */
+.night {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.night > h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.cards > img {
+    width: 175px;
+    cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto 50px auto 50px auto ;
+    grid-template-rows: auto 25px auto 25px auto;
+}
+
+#ziener, #zienerInactive {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#cupido, #cupidoInactive {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#stiekemeMeisje, #stiekemeMeisjeInactive {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+#weerwolf {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#heks, #heksInactive{
+    grid-column: 5;
+    grid-row: 3;
+}
+
+
+
+
