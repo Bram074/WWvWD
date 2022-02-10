@@ -51,7 +51,7 @@ $(document).ready(function(){
     });
 
     $(".arrowNight").click(function(){
-        $(".moon").animate({top: '155vh'}, 4000, function(){
+        $(".moon").animate({top: $(window).height() + 500}, 4000, function(){
             $(".sun").animate({top: '450px'}, 5000, function(){
                 $(".arrow").fadeIn()
                 $('.start').fadeIn()

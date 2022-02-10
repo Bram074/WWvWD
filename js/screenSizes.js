@@ -4,8 +4,8 @@ $(document).ready(function(){
 
     // Screen size
         // Initial
-    const minWidth = 990
-    const minHeight = 750
+    const minWidth = 850
+    const minHeight = 650
 
     if ($(window).width() < minWidth || $(window).height() < minHeight) {
         $('.large').hide()
